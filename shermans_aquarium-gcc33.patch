@@ -1,0 +1,26 @@
+--- shermans_aquarium-2.2.0/configure.in.orig	Sat Aug 31 12:40:38 2002
++++ shermans_aquarium-2.2.0/configure.in	Wed Sep  3 13:59:30 2003
+@@ -657,7 +657,7 @@
+ AC_MSG_RESULT(Generating src/stamp.h...done)
+ 
+ 
+-echo "char *cominfo=\"Configured `date` at `uname -n -m -r -s`\\n\";" >src/stamp.h
++echo -e "char *cominfo=\"Configured `date` at `uname -n -m -r -s`\\\n\";" >src/stamp.h
+ 
+ if test x$found_gtk2 = xno ; then
+ echo "char *libinfo=\"Libraries: gtk+ $gtk_version, gdk-pixbuf $gdk_pixbuf_version,\"" >>src/stamp.h
+@@ -670,11 +670,11 @@
+ fi
+ 
+ if test x$with_gnome = xyes ; then
+-echo "\"$gnome_version\\n\";">>src/stamp.h
++echo -e "\"$gnome_version\\\n\";">>src/stamp.h
+ else
+-echo "\"\\n\";">>src/stamp.h
++echo -e "\"\\\n\";">>src/stamp.h
+ fi
+-echo "char *gccinfo=\"$CC `$CC --version`\\n\";">>src/stamp.h
++echo -e "char *gccinfo=\"`$CC --version | head -n 1`\\\n\";">>src/stamp.h
+ 
+ AC_OUTPUT(src/Makefile Makefile) 
+ if test x$gnome1 = xyes ; then
