@@ -16,6 +16,7 @@ BuildRequires:	gnome-panel-devel >= 2.0
 BuildRequires:	pkgconfig
 Provides:	aquariumapplet = %{version}-%{release}
 Obsoletes:	aquariumapplet <= 2.2.0-1
+Obsoletes:	shermans_aquarium
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
