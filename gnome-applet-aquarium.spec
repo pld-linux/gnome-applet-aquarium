@@ -5,7 +5,7 @@ Version:	2.2.0
 Release:	2
 License:	GPL (except for images - see COPYING)
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/%{name}/shermans_aquarium-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/aquariumapplet/shermans_aquarium-%{version}.tar.gz
 # Source0-md5:	d5c6220272d18799336e0437d776d083
 Patch0:		shermans_aquarium-gcc33.patch
 Patch1:		shermans_aquarium-opt.patch
