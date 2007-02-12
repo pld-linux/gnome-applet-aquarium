@@ -1,5 +1,5 @@
 Summary:	Sherman's aquarium
-Summary(pl):	Akwarium wzorowane na komiksie Sherman's Lagoon
+Summary(pl.UTF-8):   Akwarium wzorowane na komiksie Sherman's Lagoon
 Name:		gnome-applet-aquarium
 Version:	2.2.0
 Release:	2
@@ -26,10 +26,10 @@ An applet that shows a bunch of swimming fishes from the comic
 Sherman's Lagoon, shows the CPU load, status leds and the time.
 Includes also module for xscreensaver.
 
-%description -l pl
-Applet pokazuj±cy stworzenia z komiksu Sherman's Lagoon, monitor
-obci±¿enia procesora, monitor klawiatury i zegar. Zawiera równie¿
-modu³ wygaszacza ekranu dla xscreensaver.
+%description -l pl.UTF-8
+Applet pokazujÄ…cy stworzenia z komiksu Sherman's Lagoon, monitor
+obciÄ…Å¼enia procesora, monitor klawiatury i zegar. Zawiera rÃ³wnieÅ¼
+moduÅ‚ wygaszacza ekranu dla xscreensaver.
 
 %prep
 %setup -q -n shermans_aquarium-%{version}
