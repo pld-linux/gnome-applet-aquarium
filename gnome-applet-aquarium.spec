@@ -1,5 +1,5 @@
 Summary:	Sherman's aquarium
-Summary(pl.UTF-8):   Akwarium wzorowane na komiksie Sherman's Lagoon
+Summary(pl.UTF-8):	Akwarium wzorowane na komiksie Sherman's Lagoon
 Name:		gnome-applet-aquarium
 Version:	2.2.0
 Release:	2
