@@ -1,0 +1,5 @@
+- initial release
+- NFY: Must add BR, divide into subpackages for gnome1, gnome2 and WM
+- figure out how to add to xscreensaver
+- works now with gnome2 as an applet and after some configurations
+  as a screensaver
