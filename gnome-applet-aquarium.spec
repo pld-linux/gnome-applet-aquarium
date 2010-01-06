@@ -9,17 +9,20 @@ Source0:	http://dl.sourceforge.net/aquariumapplet/shermans_aquarium-%{version}.t
 # Source0-md5:	d5c6220272d18799336e0437d776d083
 Patch0:		shermans_aquarium-gcc33.patch
 Patch1:		shermans_aquarium-opt.patch
+Patch2:		%{name}-as-needed.patch
 URL:		http://aquariumapplet.sourceforge.net/
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	autoconf >= 2.13
 BuildRequires:	gnome-panel-devel >= 2.0
 BuildRequires:	pkgconfig
+BuildRequires:	sed >= 4.0
 Provides:	aquariumapplet = %{version}-%{release}
 Obsoletes:	aquariumapplet <= 2.2.0-1
 Obsoletes:	shermans_aquarium
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
+%define		specflags	-I%{_includedir}/libgnomeui-2.0
 
 %description
 An applet that shows a bunch of swimming fishes from the comic
@@ -35,6 +38,8 @@ moduł wygaszacza ekranu dla xscreensaver.
 %setup -q -n shermans_aquarium-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+%{__sed} -e 's@/lib/@/%{_lib}/@' -i src/Makefile.in
 
 %build
 %{__autoconf}
