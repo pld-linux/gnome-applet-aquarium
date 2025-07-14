@@ -36,9 +36,9 @@ moduł wygaszacza ekranu dla xscreensaver.
 
 %prep
 %setup -q -n shermans_aquarium-%{version}
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
+%patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
 %{__sed} -e 's@/lib/@/%{_lib}/@' -i src/Makefile.in
 
 %build
